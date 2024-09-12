@@ -438,13 +438,20 @@ main.row1{
 }
 .contents h4,h3{
     color:rgb(38, 38, 106);
-    font-size: 10px;
+    font-size: 13px;
 }
 .contents h4{
-    font-size: 13px;
+    font-size: 11px;
 }
 .box .year{
     color:hotpink;
+}
+.box .year1{
+    color:hotpink;
+    font-size: 10px;
+}
+.i{
+    font-size: 12px ;
 }
 .cgpa span{
     color:hotpink;
@@ -588,6 +595,7 @@ textarea {
         border-top:.1rem solid navy;
         display:none;
         overflow: hidden;
+        transition: max-height 0.3s ease;
     }
     .navbar.active{
         display:block;
@@ -623,7 +631,7 @@ textarea {
         margin-top: 3rem;
     }
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .home-img img{
         width:48vw;
