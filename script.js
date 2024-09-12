@@ -9,14 +9,14 @@ var typed=new Typed(".text",{
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let closeBtn = document.querySelector('#close-btn');
-
+const navLinks = document.querySelectorAll('.navbar a');
 // Add click event listener to the menu icon
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
 // Add click event listener to the close button
-closeBtn.addEventListener('click', () => {
+navbar.addEventListener('click', () => {
     navbar.classList.remove('active');
 });
 
@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            document.querySelector('header nav a[href*=${id}]').classList.add('active');
         }
     });
 
@@ -44,7 +44,7 @@ window.addEventListener('scroll', () => {
 
     // Close the navbar on scroll if it's open
     if (navbar.classList.contains('active')) {
-        menuIcon.classList.remove('fa-xmark');
         navbar.classList.remove('active');
     }
 });
+
